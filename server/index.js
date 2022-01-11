@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv"
 
+import homeRoutes from "./routes/home.js"
+
 const app = express()
 
 dotenv.config()
@@ -12,9 +14,11 @@ app.use(bodyParser.json({ limit: "32mb", extended: true }))
 app.use(bodyParser.urlencoded({ limit: "32mb", extended: true }))
 app.use(cors())
 
-app.get('/', (req, res) => {
-    res.send('Welcome to the invoice manager API')
- })
+// app.get('/', (req, res) => {
+//     res.send('Welcome to the invoice manager API')
+//  })
+
+ app.use("/", homeRoutes)
 
 const CONNECTION_URL = process.env.CONNECTION_URL;
 const PORT = process.env.PORT;
