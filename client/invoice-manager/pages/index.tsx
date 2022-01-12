@@ -13,20 +13,20 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <div className="heading__row">
-          <div className="first__two__thirds">
-          <div className="header__subtitle__container">
+        <div className={styles.headingRow}>
+          <div className={styles.firstTwoThirds}>
+          <div className={styles.headerSubtitleContainer}>
             <h1>Invoices</h1>
             <p>There are 4 pending invoices</p>
           </div>
           </div>
-          <div className='last__third'>
-          <div className="filter">
-            <h2>Filter by status</h2>
+          <div className={styles.lastThird}>
+          <div className={styles.filter}>
+            <h3>Filter by status</h3>
             <p>X</p>
           </div>
-          <div className="new__invoice__button">
-            <h1>Invoice button</h1>
+          <div className={styles.newInvoiceButton}>
+            <p>Invoice button</p>
           </div>
           </div>
         </div>
